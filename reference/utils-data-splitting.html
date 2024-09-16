@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>steps-imputation – IbisML</title>
+<title>utils-data-splitting – IbisML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -230,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/steps-imputation.html">Steps</a></li><li class="breadcrumb-item"><a href="../reference/steps-imputation.html">Imputation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/utils-data-splitting.html">Utilities</a></li><li class="breadcrumb-item"><a href="../reference/utils-data-splitting.html">Data splitting</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/steps-imputation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../reference/steps-imputation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Imputation</span></a>
   </div>
 </li>
@@ -358,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/utils-data-splitting.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/utils-data-splitting.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data splitting</span></a>
   </div>
 </li>
@@ -374,29 +374,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#imputation" id="toc-imputation" class="nav-link active" data-scroll-target="#imputation">Imputation</a></li>
-  <li><a href="#ibis_ml.ImputeMean" id="toc-ibis_ml.ImputeMean" class="nav-link" data-scroll-target="#ibis_ml.ImputeMean">ImputeMean</a>
+  <li><a href="#data-splitting" id="toc-data-splitting" class="nav-link active" data-scroll-target="#data-splitting">Data splitting</a></li>
+  <li><a href="#ibis_ml.train_test_split" id="toc-ibis_ml.train_test_split" class="nav-link" data-scroll-target="#ibis_ml.train_test_split">train_test_split</a>
   <ul class="collapse">
   <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters">Parameters</a></li>
+  <li><a href="#returns" id="toc-returns" class="nav-link" data-scroll-target="#returns">Returns</a></li>
+  <li><a href="#raises" id="toc-raises" class="nav-link" data-scroll-target="#raises">Raises</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul></li>
-  <li><a href="#ibis_ml.ImputeMode" id="toc-ibis_ml.ImputeMode" class="nav-link" data-scroll-target="#ibis_ml.ImputeMode">ImputeMode</a>
-  <ul class="collapse">
-  <li><a href="#parameters-1" id="toc-parameters-1" class="nav-link" data-scroll-target="#parameters-1">Parameters</a></li>
-  <li><a href="#examples-1" id="toc-examples-1" class="nav-link" data-scroll-target="#examples-1">Examples</a></li>
-  </ul></li>
-  <li><a href="#ibis_ml.ImputeMedian" id="toc-ibis_ml.ImputeMedian" class="nav-link" data-scroll-target="#ibis_ml.ImputeMedian">ImputeMedian</a>
-  <ul class="collapse">
-  <li><a href="#parameters-2" id="toc-parameters-2" class="nav-link" data-scroll-target="#parameters-2">Parameters</a></li>
-  <li><a href="#examples-2" id="toc-examples-2" class="nav-link" data-scroll-target="#examples-2">Examples</a></li>
-  </ul></li>
-  <li><a href="#ibis_ml.FillNA" id="toc-ibis_ml.FillNA" class="nav-link" data-scroll-target="#ibis_ml.FillNA">FillNA</a>
-  <ul class="collapse">
-  <li><a href="#parameters-3" id="toc-parameters-3" class="nav-link" data-scroll-target="#parameters-3">Parameters</a></li>
-  <li><a href="#examples-3" id="toc-examples-3" class="nav-link" data-scroll-target="#examples-3">Examples</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ibis-project/ibis-ml/edit/main/docs/reference/steps-imputation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ibis-project/ibis-ml/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ibis-project/ibis-ml/edit/main/docs/reference/utils-data-splitting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ibis-project/ibis-ml/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -404,22 +391,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="imputation" class="level1">
-<h1>Imputation</h1>
-<p>Imputation and handling of missing values</p>
+<section id="data-splitting" class="level1">
+<h1>Data splitting</h1>
+<p>Segregating data into training, testing, and validation sets</p>
 </section>
-<section id="ibis_ml.ImputeMean" class="level1">
-<h1>ImputeMean</h1>
-<p><code>ImputeMean(self, inputs)</code></p>
-<p>A step for replacing NULL values in select columns with their respective mean in the training set.</p>
+<section id="ibis_ml.train_test_split" class="level1">
+<h1>train_test_split</h1>
+<p><code>train_test_split(table, unique_key, test_size=0.25, num_buckets=100, random_seed=None)</code></p>
+<p>Randomly split Ibis table data into training and testing tables.</p>
+<p>This function splits an Ibis table into training and testing tables based on a unique key or combination of keys. It uses a hashing function to convert the unique key into an integer, then applies a modulo operation to split the data into buckets. The training table consists of data points from a subset of these buckets, while the remaining data points form the test table.</p>
 <section id="parameters" class="level2">
 <h2 class="anchored" data-anchor-id="parameters">Parameters</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 14%">
-<col style="width: 63%">
-<col style="width: 11%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 87%">
+<col style="width: 3%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -431,10 +419,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>inputs</code></td>
-<td>SelectionType</td>
-<td>A selection of columns to impute. All columns must be numeric.</td>
+<td><code>table</code></td>
+<td>ir.Table</td>
+<td>The input Ibis table to be split.</td>
 <td><em>required</em></td>
+</tr>
+<tr class="even">
+<td><code>unique_key</code></td>
+<td>str | list[str]</td>
+<td>The column name(s) that uniquely identify each row in the table. This unique_key is used to create a deterministic split of the dataset through a hashing process.</td>
+<td><em>required</em></td>
+</tr>
+<tr class="odd">
+<td><code>test_size</code></td>
+<td>float</td>
+<td>The ratio of the dataset to include in the test split, which should be between 0 and 1. This ratio is approximate because the hashing algorithm may not provide a uniform bucket distribution for small datasets. Larger datasets will result in more uniform bucket assignments, making the split ratio closer to the desired value.</td>
+<td><code>0.25</code></td>
+</tr>
+<tr class="even">
+<td><code>num_buckets</code></td>
+<td>int</td>
+<td>The number of buckets into which the data is divided during the splitting process. It controls how finely the data is divided into buckets during the split process. Adjusting num_buckets can affect the granularity and efficiency of the splitting operation, balancing between accuracy and computational efficiency.</td>
+<td><code>100</code></td>
+</tr>
+<tr class="odd">
+<td><code>random_seed</code></td>
+<td>int | None</td>
+<td>Seed for the random number generator. If provided, ensures reproducibility of the split.</td>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="returns" class="level2">
+<h2 class="anchored" data-anchor-id="returns">Returns</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>tuple[ir.Table, ir.Table]</td>
+<td>A tuple containing two Ibis tables: (train_table, test_table).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="raises" class="level2">
+<h2 class="anchored" data-anchor-id="raises">Raises</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ValueError</td>
+<td>If test_size is not a float between 0 and 1.</td>
 </tr>
 </tbody>
 </table>
@@ -442,130 +492,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> ibis_ml <span class="im">as</span> ml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace NULL values in all numeric columns with their respective means, computed from the training dataset.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> step <span class="op">=</span> ml.ImputeMean(ml.numeric())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="ibis_ml.ImputeMode" class="level1">
-<h1>ImputeMode</h1>
-<p><code>ImputeMode(self, inputs)</code></p>
-<p>A step for replacing NULL values in select columns with their respective modes in the training set.</p>
-<section id="parameters-1" class="level2">
-<h2 class="anchored" data-anchor-id="parameters-1">Parameters</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 20%">
-<col style="width: 48%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>inputs</code></td>
-<td>SelectionType</td>
-<td>A selection of columns to impute.</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="examples-1" class="level2">
-<h2 class="anchored" data-anchor-id="examples-1">Examples</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> ibis_ml <span class="im">as</span> ml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace NULL values in all numeric columns with their respective modes, computed from the training dataset.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> step <span class="op">=</span> ml.ImputeMode(ml.numeric())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="ibis_ml.ImputeMedian" class="level1">
-<h1>ImputeMedian</h1>
-<p><code>ImputeMedian(self, inputs)</code></p>
-<p>A step for replacing NULL values in select columns with their respective medians in the training set.</p>
-<section id="parameters-2" class="level2">
-<h2 class="anchored" data-anchor-id="parameters-2">Parameters</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 14%">
-<col style="width: 63%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>inputs</code></td>
-<td>SelectionType</td>
-<td>A selection of columns to impute. All columns must be numeric.</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="examples-2" class="level2">
-<h2 class="anchored" data-anchor-id="examples-2">Examples</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> ibis_ml <span class="im">as</span> ml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace NULL values in all numeric columns with their respective medians, computed from the training dataset.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> step <span class="op">=</span> ml.ImputeMedian(ml.numeric())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="ibis_ml.FillNA" class="level1">
-<h1>FillNA</h1>
-<p><code>FillNA(self, inputs, fill_value)</code></p>
-<p>A step for filling NULL values in the input with a specific value.</p>
-<section id="parameters-3" class="level2">
-<h2 class="anchored" data-anchor-id="parameters-3">Parameters</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 12%">
-<col style="width: 66%">
-<col style="width: 9%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>inputs</code></td>
-<td>SelectionType</td>
-<td>A selection of columns to fillna.</td>
-<td><em>required</em></td>
-</tr>
-<tr class="even">
-<td><code>fill_value</code></td>
-<td>Any</td>
-<td>The fill value to use. Must be castable to the dtype of all columns in inputs.</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="examples-3" class="level2">
-<h2 class="anchored" data-anchor-id="examples-3">Examples</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> ibis_ml <span class="im">as</span> ml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Fill all NULL values in numeric columns with 0.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> step <span class="op">=</span> ml.FillNA(ml.numeric(), <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Fill all NULL values in specific columns with 1.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> step <span class="op">=</span> ml.FillNA([<span class="st">"x"</span>, <span class="st">"y"</span>], <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Split an Ibis table into training and testing tables.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> table <span class="op">=</span> ibis.memtable({<span class="st">"key1"</span>: <span class="bu">range</span>(<span class="dv">100</span>)})</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> train_table, test_table <span class="op">=</span> ml.train_test_split(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>...     table,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>...     unique_key<span class="op">=</span><span class="st">"key1"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>...     test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>...     random_seed<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>... )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -1183,7 +1117,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ibis-project/ibis-ml/edit/main/docs/reference/steps-imputation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ibis-project/ibis-ml/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ibis-project/ibis-ml/edit/main/docs/reference/utils-data-splitting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ibis-project/ibis-ml/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

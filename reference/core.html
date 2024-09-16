@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IbisML</title>
+<title>core – IbisML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Tutorial</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Reference</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-reference">    
@@ -140,32 +140,40 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Feature selection</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../reference/steps-feature-engineering.html">
+    <a class="dropdown-item" href="../reference/steps-feature-generation.html">
  <span class="dropdown-text">Feature generation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../reference/steps-outlier.html">
- <span class="dropdown-text">Outliers</span></a>
+    <a class="dropdown-item" href="../reference/steps-outlier-handling.html">
+ <span class="dropdown-text">Outlier handling</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../reference/steps-temporal.html">
- <span class="dropdown-text">Temporal</span></a>
+    <a class="dropdown-item" href="../reference/steps-temporal-feature-extraction.html">
+ <span class="dropdown-text">Temporal feature extraction</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../reference/steps-other.html">
  <span class="dropdown-text">Other</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Support</li>
+        <li>
+    <a class="dropdown-item" href="../reference/support-matrix/index.html">
+ <span class="dropdown-text">Transformation support matrix</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Utilities</li>
+        <li>
+    <a class="dropdown-item" href="../reference/utils-data-splitting.html">
+ <span class="dropdown-text">Data splitting</span></a>
+  </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../support_matrix.html"> 
-<span class="menu-text">Support Matrix</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/ibis-project/ibis-ml">
@@ -185,11 +193,11 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/core.html">Core</a></li><li class="breadcrumb-item"><a href="../reference/core.html">Common</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -202,9 +210,9 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Core</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -225,9 +233,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Steps</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -264,26 +272,60 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/steps-feature-engineering.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/steps-feature-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feature generation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/steps-outlier.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Outliers</span></a>
+  <a href="../reference/steps-outlier-handling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outlier handling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/steps-temporal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Temporal</span></a>
+  <a href="../reference/steps-temporal-feature-extraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Temporal feature extraction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference/steps-other.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Other</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Support</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/support-matrix/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transformation support matrix</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Utilities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/utils-data-splitting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data splitting</span></a>
   </div>
 </li>
       </ul>
@@ -309,6 +351,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ibis_ml.Recipe.get_params" id="toc-ibis_ml.Recipe.get_params" class="nav-link" data-scroll-target="#ibis_ml.Recipe.get_params">get_params</a></li>
   <li><a href="#ibis_ml.Recipe.is_fitted" id="toc-ibis_ml.Recipe.is_fitted" class="nav-link" data-scroll-target="#ibis_ml.Recipe.is_fitted">is_fitted</a></li>
   <li><a href="#ibis_ml.Recipe.set_output" id="toc-ibis_ml.Recipe.set_output" class="nav-link" data-scroll-target="#ibis_ml.Recipe.set_output">set_output</a></li>
+  <li><a href="#ibis_ml.Recipe.set_params" id="toc-ibis_ml.Recipe.set_params" class="nav-link" data-scroll-target="#ibis_ml.Recipe.set_params">set_params</a></li>
   <li><a href="#ibis_ml.Recipe.to_dask_dataframe" id="toc-ibis_ml.Recipe.to_dask_dataframe" class="nav-link" data-scroll-target="#ibis_ml.Recipe.to_dask_dataframe">to_dask_dataframe</a></li>
   <li><a href="#ibis_ml.Recipe.to_dask_dmatrix" id="toc-ibis_ml.Recipe.to_dask_dmatrix" class="nav-link" data-scroll-target="#ibis_ml.Recipe.to_dask_dmatrix">to_dask_dmatrix</a></li>
   <li><a href="#ibis_ml.Recipe.to_dmatrix" id="toc-ibis_ml.Recipe.to_dmatrix" class="nav-link" data-scroll-target="#ibis_ml.Recipe.to_dmatrix">to_dmatrix</a></li>
@@ -374,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><a href="#ibis_ml.Recipe.get_params">get_params</a></td>
-<td>Get parameters for this estimator.</td>
+<td>Get parameters for this recipe.</td>
 </tr>
 <tr class="even">
 <td><a href="#ibis_ml.Recipe.is_fitted">is_fitted</a></td>
@@ -385,42 +428,46 @@ ul.task-list li input[type="checkbox"] {
 <td>Set output type returned by <code>transform</code>.</td>
 </tr>
 <tr class="even">
+<td><a href="#ibis_ml.Recipe.set_params">set_params</a></td>
+<td>Set the parameters of this recipe.</td>
+</tr>
+<tr class="odd">
 <td><a href="#ibis_ml.Recipe.to_dask_dataframe">to_dask_dataframe</a></td>
 <td>Transform X and return a <code>dask.dataframe.DataFrame</code>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="#ibis_ml.Recipe.to_dask_dmatrix">to_dask_dmatrix</a></td>
 <td>Transform X and return a <code>xgboost.dask.DMatrix</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="#ibis_ml.Recipe.to_dmatrix">to_dmatrix</a></td>
 <td>Transform X and return a <code>xgboost.DMatrix</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="#ibis_ml.Recipe.to_ibis">to_ibis</a></td>
 <td>Transform X and return an ibis table.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="#ibis_ml.Recipe.to_numpy">to_numpy</a></td>
 <td>Transform X and return a <code>numpy.ndarray</code>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="#ibis_ml.Recipe.to_pandas">to_pandas</a></td>
 <td>Transform X and return a <code>pandas.DataFrame</code>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="#ibis_ml.Recipe.to_polars">to_polars</a></td>
 <td>Transform X and return a <code>polars.DataFrame</code>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="#ibis_ml.Recipe.to_pyarrow">to_pyarrow</a></td>
 <td>Transform X and return a <code>pyarrow.Table</code>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="#ibis_ml.Recipe.to_pyarrow_batches">to_pyarrow_batches</a></td>
 <td>Transform X and return a <code>pyarrow.RecordBatchReader</code>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="#ibis_ml.Recipe.transform">transform</a></td>
 <td>Transform the data.</td>
 </tr>
@@ -527,16 +574,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="ibis_ml.Recipe.get_params" class="level3">
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.get_params">get_params</h3>
 <p><code>get_params(deep=True)</code></p>
-<p>Get parameters for this estimator.</p>
-<p>Returns the parameters given in the constructor as well as the estimators contained within the <code>steps</code> of the <code>Recipe</code>.</p>
+<p>Get parameters for this recipe.</p>
+<p>Returns the parameters given in the constructor as well as the steps contained within the <code>steps</code> of the <code>Recipe</code>.</p>
 <section id="parameters-2" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-2">Parameters</h4>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 79%">
-<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 73%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -550,7 +597,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td><code>deep</code></td>
 <td>bool</td>
-<td>If True, will return the parameters for this estimator and contained subobjects that are estimators.</td>
+<td>If True, will return the parameters for this recipe and contained steps.</td>
 <td><code>True</code></td>
 </tr>
 </tbody>
@@ -591,7 +638,6 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.set_output">set_output</h3>
 <p><code>set_output(transform=None)</code></p>
 <p>Set output type returned by <code>transform</code>.</p>
-<p>This is part of the standard Scikit-Learn API.</p>
 <section id="parameters-3" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-3">Parameters</h4>
 <table class="caption-top table">
@@ -620,12 +666,70 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
+<section id="ibis_ml.Recipe.set_params" class="level3">
+<h3 class="anchored" data-anchor-id="ibis_ml.Recipe.set_params">set_params</h3>
+<p><code>set_params(**params)</code></p>
+<p>Set the parameters of this recipe.</p>
+<p>Valid parameter keys can be listed with <code>get_params()</code>. Note that you can directly set the parameters of the steps contained in <code>steps</code>.</p>
+<section id="parameters-4" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-4">Parameters</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 84%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>**params</code></td>
+<td>dict</td>
+<td>Parameters of this recipe or parameters of steps contained in <code>steps</code>. Parameters of the steps may be set using its name and the parameter name separated by a ’__’.</td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="returns-3" class="level4">
+<h4 class="anchored" data-anchor-id="returns-3">Returns</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>object</td>
+<td>Recipe class instance.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes</h4>
+<p>Derived from [1]_ and [2]_.</p>
+</section>
+<section id="references-1" class="level4">
+<h4 class="anchored" data-anchor-id="references-1">References</h4>
+<p>.. [1] https://github.com/scikit-learn/scikit-learn/blob/ff1c6f3/sklearn/utils/metaestimators.py#L51-L70 .. [2] https://github.com/scikit-learn/scikit-learn/blob/74016ab/sklearn/base.py#L214-L256</p>
+</section>
+</section>
 <section id="ibis_ml.Recipe.to_dask_dataframe" class="level3">
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_dask_dataframe">to_dask_dataframe</h3>
 <p><code>to_dask_dataframe(X, categories=False)</code></p>
 <p>Transform X and return a <code>dask.dataframe.DataFrame</code>.</p>
-<section id="parameters-4" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-4">Parameters</h4>
+<section id="parameters-5" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-5">Parameters</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
@@ -662,8 +766,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_dask_dmatrix">to_dask_dmatrix</h3>
 <p><code>to_dask_dmatrix(X)</code></p>
 <p>Transform X and return a <code>xgboost.dask.DMatrix</code></p>
-<section id="parameters-5" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-5">Parameters</h4>
+<section id="parameters-6" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-6">Parameters</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -688,8 +792,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_dmatrix">to_dmatrix</h3>
 <p><code>to_dmatrix(X)</code></p>
 <p>Transform X and return a <code>xgboost.DMatrix</code></p>
-<section id="parameters-6" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-6">Parameters</h4>
+<section id="parameters-7" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-7">Parameters</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -714,8 +818,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_ibis">to_ibis</h3>
 <p><code>to_ibis(X)</code></p>
 <p>Transform X and return an ibis table.</p>
-<section id="parameters-7" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-7">Parameters</h4>
+<section id="parameters-8" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-8">Parameters</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -740,8 +844,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_numpy">to_numpy</h3>
 <p><code>to_numpy(X)</code></p>
 <p>Transform X and return a <code>numpy.ndarray</code>.</p>
-<section id="parameters-8" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-8">Parameters</h4>
+<section id="parameters-9" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-9">Parameters</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -766,8 +870,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_pandas">to_pandas</h3>
 <p><code>to_pandas(X, categories=False)</code></p>
 <p>Transform X and return a <code>pandas.DataFrame</code>.</p>
-<section id="parameters-9" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-9">Parameters</h4>
+<section id="parameters-10" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-10">Parameters</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
@@ -804,8 +908,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_polars">to_polars</h3>
 <p><code>to_polars(X)</code></p>
 <p>Transform X and return a <code>polars.DataFrame</code>.</p>
-<section id="parameters-10" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-10">Parameters</h4>
+<section id="parameters-11" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-11">Parameters</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -830,8 +934,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_pyarrow">to_pyarrow</h3>
 <p><code>to_pyarrow(X, categories=False)</code></p>
 <p>Transform X and return a <code>pyarrow.Table</code>.</p>
-<section id="parameters-11" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-11">Parameters</h4>
+<section id="parameters-12" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-12">Parameters</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
@@ -868,8 +972,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.to_pyarrow_batches">to_pyarrow_batches</h3>
 <p><code>to_pyarrow_batches(X, categories=False)</code></p>
 <p>Transform X and return a <code>pyarrow.RecordBatchReader</code>.</p>
-<section id="parameters-12" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-12">Parameters</h4>
+<section id="parameters-13" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-13">Parameters</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
@@ -906,8 +1010,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="ibis_ml.Recipe.transform">transform</h3>
 <p><code>transform(X)</code></p>
 <p>Transform the data.</p>
-<section id="parameters-13" class="level4">
-<h4 class="anchored" data-anchor-id="parameters-13">Parameters</h4>
+<section id="parameters-14" class="level4">
+<h4 class="anchored" data-anchor-id="parameters-14">Parameters</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -927,8 +1031,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="returns-3" class="level4">
-<h4 class="anchored" data-anchor-id="returns-3">Returns</h4>
+<section id="returns-4" class="level4">
+<h4 class="anchored" data-anchor-id="returns-4">Returns</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1130,18 +1234,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1173,7 +1266,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1181,7 +1296,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
